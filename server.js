@@ -2,6 +2,7 @@ var express = require("express")
 var bodyParser = require("body-parser")
 var Sequelize = require("sequelize")
 var nodeadmin = require("nodeadmin")
+var cors = require('cors')
 
 var sequelize = new Sequelize('materii', 'root', '', {
     dialect:'mysql',
@@ -19,7 +20,7 @@ app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
-
+app.use(cors())
 app.use('/nodeadmin', nodeadmin(app))
 
 //accesez fisiere statice incluse in directorul public

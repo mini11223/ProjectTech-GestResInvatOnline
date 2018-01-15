@@ -117,6 +117,18 @@ app.get('/objects', function(request, response) {
         
 })
 
+app.delete('/objects/:id', function(request, response) {
+    Objects.findById(request.params.id).then(function(Objects) {
+        if(Objects) {
+            Objects.destroy().then(function(){
+                response.status(204).send()
+            })
+        } else {
+            response.status(404).send('Not found')
+        }
+    })
+})
+
 app.get('/objects/:id', function(request, response) {
     
     Objects.findOne({attributes: ['id', 'numeMaterie','idCategorie'],where: {id:request.params.id}}).then(function(category) {

@@ -6,6 +6,8 @@
   "dependencies": {
     "express": "^4.16.2",
     "mysql2": "^1.5.1",
+    "react-share": "^1.19.0",
+    "react-social": "^1.10.0",
     "sequelize": "^4.22.15"
   },
   "devDependencies": {},

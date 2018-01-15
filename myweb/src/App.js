@@ -78,7 +78,7 @@ class AddMaterie extends Component {
     <form>
     <br></br>
   Categorie: <input type="text" value={this.state.value} onChange={this.handleChange}></input><br></br>
- <button className="asezare" type="button" onClick={() => this.reMaterie(this.state.value)}></button>
+ <button className="asezare" type="button" onClick={() => this.reMaterie(this.state.value)}>Adauga</button>
     </form>
     
       </div>
@@ -316,7 +316,7 @@ class AddObiecte extends Component {
     <br></br>
   Obiect:<input type="text" value={this.state.value1} onChange={this.handleChange1}></input><br></br>
   Id Categorie:<input type="text" value={this.state.value2} onChange={this.handleChange2}></input><br></br>
- <button className="asezare" type="button" onClick={() => this.reObiect(this.state.value1,this.state.value2)}></button>
+ <button className="asezare" type="button" onClick={() => this.reObiect(this.state.value1,this.state.value2)}>Adauga</button>
     </form>
     
       </div>
@@ -474,8 +474,8 @@ class App extends Component {
                 <li onClick={() => this.schimba(1)} >Home</li>
                 <li onClick={() => this.categoriJson(2)}>Categorii</li>
                 <li onClick={() => this.obiecteJson(3)}>Obiecte</li>
-                <li onClick={() => this.schimba(4)}>re categorie</li>
-                <li onClick={() => this.schimba(5)}>re obiect</li>
+                <li onClick={() => this.schimba(4)}>Adaugare categorie</li>
+                <li onClick={() => this.schimba(5)}>Adaugare obiect</li>
                 <li onClick={() => this.schimba(6)}>Stergere categorie</li>
                 <li onClick={() => this.schimba(7)}>Stergere obiect</li>
                
